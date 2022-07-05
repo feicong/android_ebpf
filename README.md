@@ -2,7 +2,10 @@
 
 ## tested env
 
-- Android 10 arm64
+- Android 10 arm64 emulator
+
+- Android kernel: 4.14
+
 ## install termux.apk
 
 ```
