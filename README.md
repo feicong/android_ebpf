@@ -2,9 +2,9 @@
 
 ## tested env
 
-- Android 10 arm64 emulator
+- Android 10 with arm64/x86_64 kernel 4.14
 
-- Android kernel: 4.14
+- Android 12 with arm64 kernel 5.10
 
 ## install termux.apk
 
