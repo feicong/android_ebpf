@@ -245,10 +245,17 @@ setup kernel headers:
 
 ```
  % adb push kernel-headers/* /data/local/tmp/debian/lib/modules/4.14.175-g1aec57a92e09-dirty/build
+ % git clone https://github.com/tiann/eadb
+ % adb push eadb/assets/* /data/local/tmp/
+ % adb root
+ % adb shell
+ # /data/local/tmp/run
 ```
 
 
 TBD
+
+## test for ubuntu rootfs
 
 install ubuntu rootfs:
 
