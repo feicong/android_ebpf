@@ -192,6 +192,20 @@ CONFIG_IKCONFIG=y
 CONFIG_IKCONFIG_PROC=y
 ```
 
+don't setup `CONFIG_IKHEADERS=m` for android 5.10(or other ACK), it will break the compilation process on modulers.order check:
+
+```
+ Checking the list of modules:
+--- common/android/gki_aarch64_modules	2022-07-07 07:03:16.994494975 +0000
++++ android-kernel/out/android12-5.10/common/modules.order	2022-07-07 07:13:37.442139765 +0000
+@@ -0,0 +1 @@
++kernel/kheaders.ko
+ERROR: modules list out of date
+Update it with:
+cp android-kernel/out/android12-5.10/common/modules.order common/android/gki_aarch64_modules
+```
+
+
 check probe symbols:
 
 ```
