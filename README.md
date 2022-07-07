@@ -391,3 +391,5 @@ https://github.com/termux/proot-distro/releases/download/v1.2-ubuntu-focal-rootf
 https://github.com/termux/proot-distro/releases/download/v3.0.1/ubuntu-aarch64-pd-v3.0.1.tar.xz
 
 https://github.com/termux/proot-distro/releases/tag/v3.0.1
+
+https://github.com/microsoft/WSL/issues/5526
