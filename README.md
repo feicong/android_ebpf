@@ -235,15 +235,6 @@ check probe symbols:
 ## test for debina rootfs
 
 ```
-# cat  /etc/apt/sources.list
-deb https://mirrors.ustc.edu.cn/debian bullseye main
-
-# apt install bpftrace bpftool bcc bpfcc-tools
-```
-
-setup kernel headers:
-
-```
  % adb push /Users/android/Downloads/debian /data/local/tmp/
  % adb push kernel-headers/* /data/local/tmp/debian/lib/modules/4.14.175-g1aec57a92e09-dirty/build
  % git clone https://github.com/tiann/eadb
@@ -253,6 +244,9 @@ setup kernel headers:
  # chmod 777 /data/local/tmp/run*
  # chmod 777 /data/local/tmp/device*
  # /data/local/tmp/run
+root@localhost:/# cat  /etc/apt/sources.list
+deb https://mirrors.ustc.edu.cn/debian bullseye main
+root@localhost:/# apt install bpftrace bpftool bcc bpfcc-tools -y
 ```
 
 
