@@ -236,6 +236,7 @@ check probe symbols:
 
 ```
  % adb push /Users/android/Downloads/debian /data/local/tmp/
+ % adb shell mkdir -p /data/local/tmp/debian/lib/modules/4.14.175-g1aec57a92e09-dirty/build/
  % adb push kernel-headers/* /data/local/tmp/debian/lib/modules/4.14.175-g1aec57a92e09-dirty/build
  % git clone https://github.com/tiann/eadb
  % adb push eadb/assets/ /data/local/tmp/
@@ -246,7 +247,10 @@ check probe symbols:
  # /data/local/tmp/run
 root@localhost:/# cat  /etc/apt/sources.list
 deb https://mirrors.ustc.edu.cn/debian bullseye main
-root@localhost:/# apt install bpftrace bpftool bcc bpfcc-tools -y
+root@localhost:/# apt update && apt install wget curl bpftrace bpftool bcc bpfcc-tools -y
+root@localhost:/# wget https://raw.githubusercontent.com/iovisor/bcc/master/tools/execsnoop.py
+root@localhost:/# chmod 777 execsnoop.py
+root@localhost:/# python3 execsnoop.py
 ```
 
 
