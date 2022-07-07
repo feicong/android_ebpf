@@ -242,9 +242,19 @@ check probe symbols:
  % adb push eadb/assets/ /data/local/tmp/
  % adb root
  % adb shell
- # chmod 777 /data/local/tmp/run*
- # chmod 777 /data/local/tmp/device*
- # /data/local/tmp/run
+ 
+/data/local/tmp # chmod 777 /data/local/tmp/run*
+/data/local/tmp # chmod 777 /data/local/tmp/device*
+ 
+/data/local/tmp # mkdir -p debian/proc/
+/data/local/tmp # mkdir -p debian/sys/
+/data/local/tmp # mkdir -p debian/sys/fs/bpf/
+/data/local/tmp # mkdir -p debian/sys/kernel/debug/
+/data/local/tmp # mkdir -p debian/sys/kernel/tracing/
+/data/local/tmp # mkdir -p debian/tmp/
+/data/local/tmp # mkdir -p debian/etc/apt/preferences.d/
+
+/data/local/tmp # /data/local/tmp/run
 root@localhost:/# cat  /etc/apt/sources.list
 deb https://mirrors.ustc.edu.cn/debian bullseye main
 root@localhost:/# apt update && apt install wget curl bpftrace bpftool bcc bpfcc-tools -y
