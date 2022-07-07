@@ -244,11 +244,14 @@ deb https://mirrors.ustc.edu.cn/debian bullseye main
 setup kernel headers:
 
 ```
+ % adb push /Users/android/Downloads/debian /data/local/tmp/
  % adb push kernel-headers/* /data/local/tmp/debian/lib/modules/4.14.175-g1aec57a92e09-dirty/build
  % git clone https://github.com/tiann/eadb
- % adb push eadb/assets/* /data/local/tmp/
+ % adb push eadb/assets/ /data/local/tmp/
  % adb root
  % adb shell
+ # chmod 777 /data/local/tmp/run*
+ # chmod 777 /data/local/tmp/device*
  # /data/local/tmp/run
 ```
 
